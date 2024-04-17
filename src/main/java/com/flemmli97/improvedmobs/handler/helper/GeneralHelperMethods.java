@@ -1,6 +1,5 @@
 package com.flemmli97.improvedmobs.handler.helper;
 
-import com.flemmli97.improvedmobs.entity.EntityGuardianBoat;
 import com.flemmli97.improvedmobs.handler.DifficultyData;
 import com.flemmli97.improvedmobs.handler.config.ConfigHandler;
 import com.flemmli97.improvedmobs.handler.config.EquipmentList;
@@ -25,8 +24,6 @@ import net.minecraft.world.World;
 public class GeneralHelperMethods {
 
 	public static boolean isMobInList(EntityLiving living, String[] list, boolean reverse) {
-		if(living instanceof EntityGuardianBoat)
-			return !reverse;
 		if(reverse)
 			return !isMobInList(living, list, false);
 		for (String s : list) {
